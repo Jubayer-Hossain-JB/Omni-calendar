@@ -1,0 +1,4304 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta http-equiv="X-UA-Compatible" content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+	<title> Omni calender</title>
+	<link rel="icon" href="calender.ico">
+	<link rel="favicon" href="calender.ico">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+	<script src="jquery.js" type='text/javascript' defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
+
+	<script src='animate.js' type="text/javascript" defer></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript">
+		document.onkeyup = function(a){
+			if(a.keyCode===13){
+				erase();
+			}
+		}
+
+	</script>
+	<meta charset="UTF-8">
+</head>
+
+
+<body onload="thisTime()">
+	<div class="daw" draggable="true"></div>
+	<div class="time" id="time"></div>
+	<div class="top" id="sal"></div><!-- onclick="window.scroll(0,0)"-->
+
+	<h1 class="Welcome" style="z-index:10;">Welcome To Omni Calender</h1>
+	<p class="det">0 to Universal year</p>
+	<div class ="he">
+		<input type="number" id="year">
+		<input type="button" value="Go" onclick="erase()">
+
+		<h2 id="day"></h2>
+	</div>
+
+<h4 class="mname">January</h4>
+<div class="month 1">
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+
+<div class="date s" id="d1">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d2">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d3">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d4">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d5">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d6">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d7">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+
+<div class="date s" id="d8">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d9">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d10">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d11">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d12">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d13">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d14">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d15">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d16">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d17">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d18">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d19">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d20">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d21">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d22">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d23">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d24">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d25">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d26">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d27">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d28">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d29">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d30">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d31">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d32">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d33">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d34">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d35">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>
+<h4 class="mname">February</h4>
+<div class="month 2">	
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+		
+<div class="date s" id="d36">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d37">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d38">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d39">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d40">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d41">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d42">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d43">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d44">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d45">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d46">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d47">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d48">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d49">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d50">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d51">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d52">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d53">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d54">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d55">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d56">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d57">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d58">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d59">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d60">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d61">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d62">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d63">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d64">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d65">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d66">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d67">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d68">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d69">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d70">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>		
+	<h4 class="mname">March</h4>
+<div class="month 3">
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+	
+<div class="date s" id="d71">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d72">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d73">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d74">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d75">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d76">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d77">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d78">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d79">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d80">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d81">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d82">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d83">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d84">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d85">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d86">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d87">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d88">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d89">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d90">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d91">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d92">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d93">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d94">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d95">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d96">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d97">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d98">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d99">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d100">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d101">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d102">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d103">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d104">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d105">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>	
+<h4 class="mname">April</h4>	
+<div class="month 4">
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+	
+<div class="date s" id="d106">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d107">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d108">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d109">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d110">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d111">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d112">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d113">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d114">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d115">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d116">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d117">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d118">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d119">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d120">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d121">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d122">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d123">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d124">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d125">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d126">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d127">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d128">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d129">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d130">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d131">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d132">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d133">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d134">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d135">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d136">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d137">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d138">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d139">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d140">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>
+<h4 class="mname">May</h4>
+<div class="month 5">
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+
+<div class="date s" id="d141">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d142">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d143">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d144">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d145">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d146">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d147">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d148">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d149">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d150">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d151">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d152">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d153">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d154">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d155">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d156">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d157">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d158">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d159">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d160">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d161">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d162">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d163">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d164">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d165">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d166">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d167">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d168">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d169">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d170">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d171">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d172">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d173">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d174">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d175">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>
+<h4 class="mname">June</h4>
+<div class="month 6">
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+
+<div class="date s" id="d176">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d177">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d178">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d179">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d180">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d181">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d182">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d183">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d184">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d185">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d186">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d187">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d188">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d189">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d190">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d191">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d192">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d193">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d194">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d195">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d196">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d197">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d198">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d199">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d200">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d201">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d202">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d203">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d204">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d205">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d206">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d207">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d208">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d209">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d210">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>	
+	<h4 class="mname">July</h4>	
+<div class="month 7">		
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+	
+<div class="date s" id="d211">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d212">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d213">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d214">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d215">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d216">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d217">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d218">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d219">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d220">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d221">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d222">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d223">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d224">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d225">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d226">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d227">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d228">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d229">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d230">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d231">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d232">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d233">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d234">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d235">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d236">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d237">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d238">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d239">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d240">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d241">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d242">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d243">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d244">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d245">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>			
+<h4 class="mname">August</h4>
+<div class="month 8">			
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+
+<div class="date s" id="d246">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d247">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d248">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d249">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d250">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d251">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d252">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d253">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d254">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d255">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d256">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d257">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d258">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d259">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d260">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d261">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d262">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d263">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d264">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d265">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d266">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d267">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d268">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d269">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d270">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d271">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d272">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d273">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d274">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d275">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d276">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d277">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d278">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d279">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d280">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>			
+<h4 class="mname">September</h4>
+<div class="month 9">			
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+
+<div class="date s" id="d281">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d282">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d283">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d284">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d285">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d286">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d287">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d288">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d289">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d290">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d291">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d292">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d293">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d294">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d295">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d296">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d297">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d298">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d299">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d300">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d301">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d302">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d303">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d304">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d305">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d306">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d307">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d308">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d309">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d310">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d311">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d312">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d313">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d314">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d315">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>			
+<h4 class="mname">October</h4>
+<div class="month 10">			
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+
+<div class="date s" id="d316">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d317">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d318">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d319">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d320">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d321">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d322">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d323">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d324">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d325">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d326">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d327">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d328">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d329">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d330">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d331">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d332">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d333">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d334">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d335">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d336">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d337">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d338">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d339">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d340">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d341">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d342">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d343">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d344">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d345">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d346">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d347">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d348">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d349">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d350">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>			
+<h4 class="mname">November</h4>
+<div class="month 11">			
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+
+<div class="date s" id="d351">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d352">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d353">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d354">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d355">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d356">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d357">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d358">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d359">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d360">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d361">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d362">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d363">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d364">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d365">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d366">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d367">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d368">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d369">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d370">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d371">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d372">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d373">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d374">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d375">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d376">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d377">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d378">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d379">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d380">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d381">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d382">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d383">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d384">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d385">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>			
+<h4 class="mname">December</h4>
+<div class="month 12">			
+<div class="date d">Sat</div><div class="date d">Sun</div><div class="date d">Mon</div><div class="date d">Tue</div><div class="date d">Wed</div><div class="date d">Thu</div><div class="date f">Fri</div>
+
+<div class="date s" id="d386">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d387">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d388">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d389">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d390">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d391">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d392">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d393">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d394">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d395">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d396">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d397">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d398">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d399">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d400">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d401">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d402">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d403">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d404">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d405">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d406">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d407">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d408">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d409">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d410">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d411">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d412">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d413">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date s" id="d414">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date su" id="d415">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date mon" id="d416">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date tue" id="d417">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date wed" id="d418">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date thu" id="d419">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+<div class="date fri" id="d420">
+	<div class="dateEnglish">
+	</div>
+
+	<div class="dateBangla">
+	</div>
+
+	<div class="dateArabi">
+	</div>
+</div>
+</div>
+</body>
