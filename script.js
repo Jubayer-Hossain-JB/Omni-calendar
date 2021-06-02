@@ -31,7 +31,7 @@ function time(){
 // End of clock function
 
 var store = 0;
-function setDate(add){
+function setDate(add){//mark today
 	var time = new Date();
 	var day = time.getDate();
 	var mon = time.getMonth();
@@ -41,13 +41,13 @@ function setDate(add){
 		store = today;
 		$('#'+today).addClass('today')
 		monthArrey =[".month.1",".month.2",".month.3",".month.4",".month.5",".month.6",".month.7",".month.8",".month.9",".month.10",".month.11",".month.12",]
-		// $('html, body').animate({scrollTop : 5},800,
-		// 	function(){
-		// 		setTimeout(
-		// 		function(){$('html, body').animate({scrollTop : $(monthArrey[mon]).position()['top']-150},800)},
-		// 		3500
-		// 	)}
-		// )
+		$('html, body').animate({scrollTop : 5},800,
+			function(){
+				setTimeout(
+				function(){$('html, body').animate({scrollTop : $(monthArrey[mon]).position()['top']-150},800)},
+				3500
+			)}
+		)
 	}else{
 		document.getElementById(store).style.setProperty('background','#B2FFFE');
 		document.getElementById(store).style.setProperty('color','grey');
