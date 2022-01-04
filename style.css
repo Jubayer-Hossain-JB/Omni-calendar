@@ -15,6 +15,7 @@
     .date{
         position: relative;
         border-bottom: 1px solid lime;
+        border-left: 1px solid #3a67a317;
         height:3rem;
         width:10vw;
         text-align:center;
@@ -30,16 +31,22 @@
         background :#5A9AEB;
         color: #fff
     }
+    .today .dateBangla{
+        color: #fff;
+    }
+
     .dateBangla{
-        position: absolute;
-        left: -10%;
-        bottom: 20%;
-        color: red;
-        position: absolute;
-        font-size: 11pt;
         width: 15px;
         height: 15px;
+        position: absolute;
+        left: 0%;
+        bottom: 20%;
+        padding:0 1px 3px 1px;
+        color: #686e0a9d;
+        position: absolute;
+        font-size: 11pt;
         transform:translate(100%,50%);
+        border-radius: 3px;
     }
     .dateArabi{
         position: absolute;
@@ -116,14 +123,18 @@
     color: lawngreen;
 }
 
-.fri:hover{
+.fri:hover, .holyday, .holyday .dateBangla{
     background: #F96263;
     color: beige;
 }
 
-.s:hover,.su:hover,.mon:hover,.tue:hover,.wed:hover,.thu:hover{
+.s:hover,.su:hover,.mon:hover,.tue:hover,.wed:hover,.thu:hover, .mark_bangla{
     background: #5A9AEB;
     color:beige;
+}
+
+.date:hover .dateBangla{
+    color: #fff;
 }
 
 .time{
@@ -139,4 +150,61 @@
     background:#0a3e83;
     cursor: pointer;
 
+}
+.mname_Bangla{
+    width: 2in;
+    transform:translateX(77vw);
+    text-align: left;
+    color: #0a3e83;
+    margin: 0;
+}
+
+.Bangla-year{
+    width: 30px;
+    transform: translate(56.6rem,8.8rem);
+    color: #0a3e83;
+    font-size: 20px;
+}
+
+.Bangla-year.s{
+    transform:translate(56.6rem,-0.2rem)
+}
+
+.holyday::after,
+.holyday::before{
+    --color: #333;
+    position: absolute;
+    top: -40PX;
+    left: 85px;        
+    transform: translateY(var(--translateY)) translateX(-50%);
+    opacity:0;
+    visibility:hidden;
+    transition: all cubic-bezier(0.30, 0.94, 0.54, 1.54) 500ms;
+    transform-origin: bottom center;
+}
+.holyday::before{
+    content: attr(tool-tip);
+    --translateY: -100%;
+    width: max-content;
+    max-width: 20rem;
+    padding: 10px;
+    background: var(--color);
+    border-radius: 10px;
+    box-shadow:  0 0 8px rgba(0, 0, 0, 0.934);
+}
+
+.holyday::after{
+    content: '';
+    --translateY: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--color);
+    transform-origin: top center;
+}
+
+.holyday:hover::before,
+.holyday:hover::after{
+    opacity: 1;
+    visibility: visible;
+    transform: 0;
+    top: -11px
 }
