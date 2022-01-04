@@ -35,13 +35,13 @@ function setDate(add){//mark today
 	var time = new Date();
 	var day = time.getDate();
 	var mon = time.getMonth();
-	var today = 'd'+(add+35*mon+day-1);
+	var today = marking([day, mon]);
 	var year = parseInt(document.getElementById('year').value);
 	if(thisYear===year)	{
 		store = today;
-		$('#'+today).addClass('today')
+		$(today).addClass('today')
 		monthArrey =[".month.1",".month.2",".month.3",".month.4",".month.5",".month.6",".month.7",".month.8",".month.9",".month.10",".month.11",".month.12",]
-		$('html, body').animate({scrollTop : 5},800,
+		$('html, body').animate({scrollTop : 2},800,
 			function(){
 				setTimeout(
 				function(){$('html, body').animate({scrollTop : $(monthArrey[mon]).position()['top']-150},800)},
@@ -62,6 +62,8 @@ function thisTime() {
 	var mon = time.getMonth();
 	setdate = 35*mon; //setdate is for function setDate() for marking today 
 	document.getElementById('year').value = now;
+	$('.Bangla-year.1').html(now-594)
+	$('.Bangla-year.2').html(now-593)
 	thisYear = now;
     Calender();
 }
@@ -109,6 +111,7 @@ function erase() {
                     break;
             }
 			 $('#d'+d+' .dateEnglish').text('');
+			 $('#d'+d+' .dateBangla').text('');
              d++;
             }
 							
@@ -116,6 +119,8 @@ function erase() {
         }
     }
 
+
+// making the first day of first date of the year
 function Calender(){
 	var Year = parseInt(document.getElementById('year').value);
 	var MinusLeapYear = Math.floor(((Year-1)/400*4)-Math.floor((Year-1)/400)); //This MunusLeapyear for indentify the year when it shoud not count as leapyear though nurmally count
@@ -146,10 +151,12 @@ function Calender(){
 	// style.innerText = '#d1::after {content:"1"}';
 	// document.body.appendChild(style)
 }
+
 var januaryspace;
 var year;
 function Bangla_Arabi(){
 	var forleapyear;
+	var leapyear2;
 	if (year%100 == 0){
 		if (year%400 ==0){
 			forleapyear=0
@@ -176,19 +183,18 @@ function Bangla_Arabi(){
 		januaryspace+3+1-forleapyear+3+2+3+2+3+3+2+3,
 		januaryspace+3+1-forleapyear+3+2+3+2+3+3+2+3+2,
 	];//28=0; 29=1; 30=2; 31=3
-	console.log(35*11+whiteSpace[11]%7+30-35*12)
 	// বৈশাখ
 	supBangla_Arabi(35*3, whiteSpace[3],   whiteSpace[4], 35*4, 14, 30, 31);//April
 	// জৈষ্ঠ
 	supBangla_Arabi(35*4, whiteSpace[4],   whiteSpace[5], 35*5, 15, 31, 31);//May
 	//আষাঢ়
-	// supBangla_Arabi(35*5, whiteSpace[5],   whiteSpace[6], 35*6, 15, 30, 31);//june
+	supBangla_Arabi(35*5, whiteSpace[5],   whiteSpace[6], 35*6, 15, 30, 31);//june
 	//শ্রাবণ
 	supBangla_Arabi(35*6, whiteSpace[6],   whiteSpace[7], 35*7, 16, 31, 31);//jully
 	//ভাদ্র
 	supBangla_Arabi(35*7, whiteSpace[7],   whiteSpace[8], 35*8, 16, 31, 31);//August
 	//আশ্বিন
-	supBangla_Arabi(35*8, whiteSpace[8],   whiteSpace[9], 35*9, 17, 30, 30);//september
+	supBangla_Arabi(35*8, whiteSpace[8],   whiteSpace[9], 35*9, 16, 30, 31);//september
 	//কার্তিক
 	supBangla_Arabi(35*9, whiteSpace[9],   whiteSpace[10], 35*10, 17, 31, 30);//october
 	//অগ্রহায়ণ
@@ -198,32 +204,46 @@ function Bangla_Arabi(){
 	//মাঘ
 	supBangla_Arabi(35*0, whiteSpace[0],   whiteSpace[1], 35*1, 15, 31, 30);//january
 	//ফাল্গুন
-	supBangla_Arabi(35*1, whiteSpace[1],   whiteSpace[2], 35*2, 14, 29-forleapyear, 30);//February
+	supBangla_Arabi(35*1, whiteSpace[1],   whiteSpace[2], 35*2, 14, 29-forleapyear, 30-forleapyear);//February
 	//চৈত্র
-	supBangla_Arabi(35*2, whiteSpace[2],   whiteSpace[3], 35*3, 15+forleapyear, 31, 30);//March
+	supBangla_Arabi(35*2, whiteSpace[2],   whiteSpace[3], 35*3, 15, 31, 30);//March
+
+	var mariking_days = [15, 14, 15, 14, 15, 15 ,16, 16, 16, 17, 16, 16]
+	for (var i=0; i<12; i++){
+		var da = marking([mariking_days[i], i]);
+		$(da+' .dateBangla').addClass("mark_bangla")
+	}
 
 }
 
-function supBangla_Arabi(ce, space, space2, end, st, enddate, len){
-	if (space>7){
+function supBangla_Arabi(ce, space, space2, next_table, st, englen, len){
+	if (space%7 != 0 && space>7){
 		space = space%7;
-	}
+	}else if(space%7 == 0  && space>7){space=7	}
+	
+	if (space2%7 != 0 && space2>7){
+		space2 = space2%7;
+	}else if(space2%7 == 0  && space2>7){space2=7}
+	
+
 	var da = ce + space-1 + st; // da for date cell
 	var num = 1;      //num for date num
+	var first_condition_exeed = false;
 	for(var i =1;i<=len;i++){
 		$('#d'+da+" .dateBangla").text(num);
 		da++; num++;
 		
-		totalDate = ce+space+enddate-1
-		if (totalDate>end && (da == end+1 || (da>end && da<=end+1))){
-			da = ce+1			
-			console.log(da)
+		totalDate = ce+space+englen-1;
+		var last_cell = totalDate - 35;
+		
+		if (totalDate>ce+35 && da=== ce+35+1){
+			first_condition_exeed = true;
+			da = ce+1;
+		}else if(first_condition_exeed && da===last_cell+1){
+			da= next_table+space2
 		}
-		// console.log(totalDate-end+"\n"+da);
-		if ((totalDate-end)==da-1){
-			da = end+space2%7
-		}else if(totalDate+1 == da){
-			da = end+space2%7
+		else if(totalDate<=ce+35 && da===totalDate+1){
+			da = next_table+space2
 		}
 	}
 }
@@ -329,5 +349,72 @@ function nov(a){
 }
 function dece(a){
 	sup(385, 420, a, 31);
-	// Bangla_Arabi()
+	Bangla_Arabi();
+	var holy_days = [[21,1, "আন্তর্জতিক মাতৃভাষা দিবস ও শহীদ দিবস"],
+					 [17,2, "বঙ্গবন্ধু শেখ মজিবুর রহমানের জন্মদিন"],
+					 [26, 2, "স্বাধীনতা দিবস"] ,
+					 [14, 3, "বাংলা নববর্ষ"] , 
+					 [1, 4, "আন্তর্জতিক শ্রমিক দিবস"], 
+					 [15,7, "জাতীয় শোক দিবস"], 
+					 [16,11, "বিজয় দিবস"]]
+	for(var i=-0; i<holy_days.length; i++){
+		$( marking(holy_days[i])).addClass('holyday');
+		$( marking(holy_days[i])).attr({'tool-tip': holy_days[i][2]});
+		
+	}
+}
+
+
+
+
+//marking Days if neccesary
+
+function marking(date){
+	var forleapyear;
+	if (year%100 == 0){
+		if (year%400 ==0){
+			forleapyear=1
+		}else{
+			forleapyear=0
+		}
+	}
+	else if(year%4 == 0){
+		forleapyear=1
+	}else{
+		forleapyear=0
+	}
+	var whiteSpace =[
+		januaryspace,
+		januaryspace+3,
+		januaryspace+3+forleapyear,
+		januaryspace+3+forleapyear+3,
+		januaryspace+3+forleapyear+3+2,
+		januaryspace+3+forleapyear+3+2+3,
+		januaryspace+3+forleapyear+3+2+3+2,
+		januaryspace+3+forleapyear+3+2+3+2+3,
+		januaryspace+3+forleapyear+3+2+3+2+3+3,
+		januaryspace+3+forleapyear+3+2+3+2+3+3+2,
+		januaryspace+3+forleapyear+3+2+3+2+3+3+2+3,
+		januaryspace+3+forleapyear+3+2+3+2+3+3+2+3+2,
+	];
+	var eng_mon_length = [31,28+forleapyear,31,30,31,30,31,31,30,31,30,31]
+	var day = date[0];
+	var mon = date[1];
+
+	if (whiteSpace[mon]%7 != 0 && whiteSpace[mon]>7){
+		whiteSpace[mon] = whiteSpace[mon]%7;
+	}else if(whiteSpace[mon]%7 == 0  && whiteSpace[mon]>7){whiteSpace[mon]=7}
+	
+	var first_ceel = 35*mon;
+	var last_ceel  = first_ceel+35;
+	var total_length = first_ceel+whiteSpace[mon]+eng_mon_length[mon]-1;
+	
+	da =(mon)*35 + whiteSpace[mon] +day-1;
+	if ( da>last_ceel){
+		return '#d'+ total_length-35;
+	}else{
+		return '#d'+ da;
+	}
+	
+
 }
