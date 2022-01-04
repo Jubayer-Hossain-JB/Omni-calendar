@@ -1,0 +1,31 @@
+@media only screen and (max-width: 1000px) {
+    .mname_Bangla{
+        transform: translateX(50vw)!important;
+    }
+    
+}
+
+@media only screen and (max-width: 893px){
+    .mname{
+        transform: translateX(50vw);
+    }
+    .mname_Bangla{
+        transform: translateX(40vw)!important;
+        text-align: center!important;
+    }
+
+    .daw{
+        width: 60px!important;
+        height: 100px!important;
+        background-size: 65px!important;
+    }
+}
+
+@media only screen and (max-width: 805px){
+    .Welcome{
+        font-size: 25px;
+    }
+    .time{
+        transform: translate(58px, 51px)!important;
+    }
+}
