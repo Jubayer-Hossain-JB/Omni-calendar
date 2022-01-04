@@ -14,8 +14,7 @@ $(document).ready(function(){
     });
     
     $(window).scroll(function(e){
-        var scroll = $(window).scrollTop()
-        console.log($('.daw').css('height'))
+        var scroll = $(window).scrollTop();
         if ($('.daw').css('height') > 100){
             $('.daw').animate({
             height: (200 - (scroll*2)),
