@@ -1,31 +1,137 @@
     
+    html{
+        scroll-behavior: smooth;
+    }
     *{
         font-family: 'Baloo Tamma 2', cursive;
+        margin:0;
+        padding:0
     }
+    :root{
+        --head-color: #96fc32;
+        --head-background: #01a358;
+    }
+    .dock{
+        background: #02CC6F;
+        width: 100%;
+        height: 30vw;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+    }
+    .dock::after{
+        content: "";
+        width: 100%;
+        height: 15vw;
+        background: #02CC6F;
+        position: absolute;
+        top: 30vw;
+        clip-path: ellipse(58% 43% at 50% 2%);
+    }
+    .wallpapper{
+        position: fixed;
+        top: 0;
+        z-index: -2;
+    }
+    .wallpapper img{
+        min-width: 100vw;
+        max-height: 100vh;
+        object-fit: cover;
+    }
+
     .he{
         display:flex;
         justify-content:center;
     }
+    .he>div:nth-child(1){
+        background: white;
+        position: absolute;
+        width: 215px;
+        height: 60px;
+        border-radius: 5px;
+        transform-style: preserve-3d;
+    }
+    .he>div:nth-child(2){
+        z-index: 2;
+        margin-top: 5px;
+    }
+    @property --gradient-angle{
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+    }
+    .he>div:nth-child(1)::before, .he>div:nth-child(1)::after{
+        content:"";
+        position: absolute;
+        inset:-4px;
+        border-radius: inherit;
+        background: conic-gradient(from var(--gradient-angle),#B931FC , #5D12D2, #B931FC);
+        transform: translateZ(-1px);
+        animation: border-animate 3s infinite linear;
+
+    }
+ont
+    .he>div:nth-child(1)::after{
+        filter: blur(5px);
+    }
+    
+    
+    #year{
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        height: 50px;
+        width: 147px;
+        color: #1F5BBF;
+        border:0;
+    }
+
+    #year~input{
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        margin-left: 3px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #3d547a;
+        background: linear-gradient(45deg, #09C6D9, #09E3BB, #09E340, #09E340);
+        animation: gradient 2s infinite alternate linear;
+        background-size: 300%;
+        border: none;
+        border-radius: 16px;
+    }
+
     .month {
         display: inline-grid;
         grid-template-columns: auto auto auto auto auto auto auto;
-        margin :15px;
-        margin-left: 15vw;
     }
     .date{
         position: relative;
         border-bottom: 1px solid lime;
         border-left: 1px solid #3a67a317;
-        height:3rem;
-        width:10vw;
+        --common: 10vw;
+        height:calc(5*var(--common)/10);
+        width:var(--common);
         text-align:center;
-        background:#B2FFFE;
-        line-height: 20px;
-        padding-top: 15px;
+        background:#8be2ea;
+        line-height: 1.4vw;
+        padding-top: 1.8vw;
         box-sizing:border-box;
-        color:gray;
+        color:#394F70;
         font-weight: bold;
-        font-size: 16px;;
+        font-size: 1.6vw;;
+    }
+    .date:first-child{
+        border-radius: 20px 0 0 0;
+    }
+    .date:nth-child(7){
+        border-radius: 0 20px 0 0;
+    }
+    .date:nth-child(36){
+        border-radius: 0 0 0 20px;
+    }
+    .date:last-child{
+        border-radius: 0 0 20px 0;
     }
     .today{
         background :#5A9AEB;
@@ -42,9 +148,9 @@
         left: 0%;
         bottom: 20%;
         padding:0 1px 3px 1px;
-        color: #686e0a9d;
+        color: 	#70394f;
         position: absolute;
-        font-size: 11pt;
+        font-size: 1.3vw;
         transform:translate(100%,50%);
         border-radius: 3px;
     }
@@ -61,75 +167,75 @@
     }
     .mname{
         text-align:center;
-        color: lime;
-        background: #5a9aeb;
-        padding:12px 0;
-        width: 120px;
-        transform: translate(45vw, 19px);
-        border-radius: 20px 20px 0 0;;
+        color: var(--head-color);
+        font-size: 1.5vw;
+        background: var(--head-background);
+        margin-top: 0.8vw;
+        padding:1vw 0;
+        width: 9vw;
+        border-radius: 1.5vw 1.5vw 0 0;;
         
     }
     .Welcome{
-        color:lime;
+        font-size: 3vw;
+        color: #8F1FBF;
         text-align:center;
+        margin: 0
     }
     .det{
-        color:#777;
+        padding:0;
+        margin:0;
+        color:#496203;
         text-align:center;
-        font-size:25px;
+        font-size:1.8vw;
     }
     
     .daw{
-        width: 120px;
-        height: 200px;
+        width: 8.8vw;
+        height: 14.8vw;
         position: absolute;
         transform: translate(6vw, 100px);
         border-radius: 45%;
-        background:url(calender.png) center;
-        z-index:11;
+        background: url(calender.png) center;
+        background-size: 10vw;
+        z-index: 11;
     }
     
     .top {
-        height: 2rem;
+        height: 3.5vw;
         width: 100%;
-        background: radial-gradient(#18ff0f 70%, transparent );
-        border: 1px solid #000000;
-        opacity: .5;
+        background: #11bf0bbf;
         position: sticky;
         top: 0;
         text-align: center;
-        padding-top: 9px;
-        padding-bottom: 15px;
-        color:#000000cc;
+        padding-bottom: 20px;
+        color:#1F5BBF;
         font-weight: bold;
-        font-size: 2em;
+        font-size: 3.5vw;
+        
         z-index:10;
         cursor: pointer;
     }
-    
-    #year{
-        text-align: center;
-        font-size:14px;
-    }
+
 
 .d{
     border-bottom:2px solid;
-    background: #5A9AEB;
-    color: lawngreen;
+    background: var(--head-background);
+    color: var(--head-color);
 }
 .f{
     border-bottom:2px solid;
-    background: #F96263;
-    color: lawngreen;
+    background: #C70039;
+    color:var(--head-color)
 }
 
 .fri:hover, .holyday, .holyday .dateBangla{
-    background: #F96263;
+    background: #C70039;
     color: beige;
 }
-
-.s:hover,.su:hover,.mon:hover,.tue:hover,.wed:hover,.thu:hover, .mark_bangla{
-    background: #5A9AEB;
+.s:hover, .su:hover,.mon:hover,.tue:hover,.wed:hover,.thu:hover{ transition: background-color 0.5s ease-out;}
+.s:hover, .su:hover,.mon:hover,.tue:hover,.wed:hover,.thu:hover, .mark_bangla{
+    background: #18c5d6;
     color:beige;
 }
 
@@ -138,38 +244,54 @@
 }
 
 .time{
-    width: 6.6rem;
-    font-size: 30px;
-    color: lime;
+    width: 9vw;
+    font-size: 2.6vw;
     box-sizing: border-box;
-    padding-left: 12px;
-    border: 1px solid #5A9AEB;
+    padding: 0.6vw 0 0px 1.5vw;
+    color: #09E3BB;
     position: absolute;
-    right:100px;
+    right: 6vw;
     top: 100px;
-    background:#0a3e83;
+    background: #018044;
     cursor: pointer;
+    word-spacing: -3px;
+    font-weight: bold;
+    border-radius: 1.6vw;
+}
 
+.calender{
+    display: grid;
+    justify-items: center;
+}
+.mgroup{
+    display: grid;
+    justify-items: center;
+    margin-top: 80px;
+}
+.mgroup>div:first-child{
+    position: absolute;
+    --common: 80vw;
+    width: var(--common);
+    height: calc(5.1/10*var(--common));
+    background: hsla(0, 0%, 100%, 0.34);
+    box-shadow: 0 1px 12px rgba(0, 0, 0, 0.38);
+    border-radius: 3.5vw;
+    z-index: -1;
+    backdrop-filter: blur(11px);
 }
 .mname_Bangla{
-    width: 2in;
-    transform:translateX(77vw);
+    font-size:1.2vw;
     text-align: left;
     color: #0a3e83;
     margin: 0;
 }
 
 .Bangla-year{
-    width: 30px;
-    transform: translate(56.6rem,8.8rem);
+    margin: 70px 0 -80px;
     color: #0a3e83;
-    font-size: 20px;
+    font-size: 1.8vw;
+    text-align:center;
 }
-
-.Bangla-year.s{
-    transform:translate(56.6rem,-0.2rem)
-}
-
 .holyday::after,
 .holyday::before{
     --color: #333;
@@ -181,6 +303,7 @@
     visibility:hidden;
     transition: all cubic-bezier(0.30, 0.94, 0.54, 1.54) 500ms;
     transform-origin: bottom center;
+    font-size: 16px;
 }
 .holyday::before{
     content: attr(tool-tip);
@@ -205,6 +328,20 @@
 .holyday:hover::after{
     opacity: 1;
     visibility: visible;
-    transform: 0;
+    translate: -15px;
     top: -11px
+}
+
+@keyframes gradient{
+    0%  {background-position: left;}
+    100%  {background-position: right}
+}
+
+@keyframes border-animate{
+    from{
+        --gradient-angle:0deg;
+    }
+    to{
+        --gradient-angle:360deg
+    }
 }
