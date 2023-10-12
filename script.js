@@ -7,21 +7,20 @@ function time(){
 	hour = time.getHours();
 	minute = time.getMinutes();
 	second =time.getSeconds()%2;
-	colon =" ";
+	colon =" ";
 	if(second === 1){
 		colon = ":";
 	}
 	if(hour>12){
 		hour= hour-12;
 	}
-	if (hour===0){
+	else if (hour==0){
 		hour=12;
 	}
+
 	if(hour<10){
 		hour= '0'+hour;
 	}
-	
-
 	if(minute<10){
 		minute= '0'+minute;
 	}
@@ -44,14 +43,16 @@ function setDate(add){//mark today
 		$('html, body').animate({scrollTop : 2},800,
 			function(){
 				setTimeout(
-				function(){$('html, body').animate({scrollTop : $(monthArrey[mon]).position()['top']-150},800)},
+				function(){$('html, body').animate({scrollTop : $(monthArrey[mon]).position()['top']-180},800)},
 				3500
 			)}
 		)
 	}else{
 		document.getElementById(store).style.setProperty('background','#B2FFFE');
 		document.getElementById(store).style.setProperty('color','grey');
-	}	
+	}
+	var season = [["basanto", [1,2]],["grishmo",[3,4]],["barsha",[5,6]],["sarat",[7,8]],["hamanto",[9,10]],["shit", [11,0]]]	;
+	var seasonName = season[Math.ceil(mon/2)==0?5:Math.ceil(mon/2)-1][0];
 }
 
 
@@ -62,8 +63,6 @@ function thisTime() {
 	var mon = time.getMonth();
 	setdate = 35*mon; //setdate is for function setDate() for marking today 
 	document.getElementById('year').value = now;
-	$('.Bangla-year.1').html(now-594)
-	$('.Bangla-year.2').html(now-593)
 	thisYear = now;
     Calender();
 }
@@ -120,7 +119,7 @@ function erase() {
     }
 
 
-// making the first day of first date of the year
+// searching the first day of first date of the year//
 function Calender(){
 	var Year = parseInt(document.getElementById('year').value);
 	var MinusLeapYear = Math.floor(((Year-1)/400*4)-Math.floor((Year-1)/400)); //This MunusLeapyear for indentify the year when it shoud not count as leapyear though nurmally count
@@ -141,7 +140,9 @@ function Calender(){
 	var DayArr = ["Tue","Wed","Thu","Fri","Sat","Sun","Mon"];
 	var Day = DayArr[weekDay];
 	
-	document.getElementById('sal').innerHTML=Year;
+	document.getElementById('sal').innerHTML="<p>"+Year+"</p>";
+	$('.Bangla-year.1').html(Year-594+" বং")
+	$('.Bangla-year.2').html(Year-593+" বং")
 	
 	var se = weekDay+4
 	januaryspace = se
@@ -208,7 +209,7 @@ function Bangla_Arabi(){
 	//চৈত্র
 	supBangla_Arabi(35*2, whiteSpace[2],   whiteSpace[3], 35*3, 15, 31, 30);//March
 
-	var mariking_days = [15, 14, 15, 14, 15, 15 ,16, 16, 16, 17, 16, 16]
+	var mariking_days = [15, 14, 15, 14, 15, 15 ,16, 16, 16, 17, 16, 16]//Marking for bangla new month
 	for (var i=0; i<12; i++){
 		var da = marking([mariking_days[i], i]);
 		$(da+' .dateBangla').addClass("mark_bangla")
@@ -350,16 +351,23 @@ function nov(a){
 function dece(a){
 	sup(385, 420, a, 31);
 	Bangla_Arabi();
-	var holy_days = [[21,1, "আন্তর্জতিক মাতৃভাষা দিবস ও শহীদ দিবস"],
-					 [17,2, "বঙ্গবন্ধু শেখ মজিবুর রহমানের জন্মদিন"],
-					 [26, 2, "স্বাধীনতা দিবস"] ,
-					 [14, 3, "বাংলা নববর্ষ"] , 
-					 [1, 4, "আন্তর্জতিক শ্রমিক দিবস"], 
-					 [15,7, "জাতীয় শোক দিবস"], 
-					 [16,11, "বিজয় দিবস"]]
-	for(var i=-0; i<holy_days.length; i++){
-		$( marking(holy_days[i])).addClass('holyday');
-		$( marking(holy_days[i])).attr({'tool-tip': holy_days[i][2]});
+	var holy_days = [
+		[21,1, "আন্তর্জতিক মাতৃভাষা দিবস ও শহীদ দিবস"],
+		[17,2, "বঙ্গবন্ধু শেখ মজিবুর রহমানের জন্মদিন"],
+		[26, 2, "স্বাধীনতা দিবস"] ,
+		[14, 3, "বাংলা নববর্ষ"] , 
+		[1, 4, "আন্তর্জতিক শ্রমিক দিবস"], 
+		[4,4, "বৈদ্ধ পূর্ণিমা"],
+		[15,7, "জাতীয় শোক দিবস"], 
+		[6,8, "জন্মাষ্টমী"],
+		[24,9, "বিজয়া দশমী"],
+		[16,11, "বিজয় দিবস"],
+		[25,11, "Christmas Day"]
+	]
+	for(var i=0; i<holy_days.length; i++){
+		var holiday_cell_id = $( marking(holy_days[i]))
+		holiday_cell_id.addClass('holyday');
+		holiday_cell_id.attr({'tool-tip': holy_days[i][2]});
 		
 	}
 }
