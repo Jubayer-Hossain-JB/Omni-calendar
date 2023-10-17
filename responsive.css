@@ -1,31 +1,54 @@
-@media only screen and (max-width: 1000px) {
-    .mname_Bangla{
-        transform: translateX(50vw)!important;
-    }
-    
-}
 
-@media only screen and (max-width: 893px){
-    .mname{
-        transform: translateX(50vw);
-    }
-    .mname_Bangla{
-        transform: translateX(40vw)!important;
-        text-align: center!important;
-    }
 
-    .daw{
-        width: 60px!important;
-        height: 100px!important;
-        background-size: 65px!important;
+@media only screen and (max-width: 415px){
+    .Welcome, .top{
+        font-size: 7vw;
     }
-}
-
-@media only screen and (max-width: 805px){
-    .Welcome{
-        font-size: 25px;
+    .det{font-size: 5vw;}
+    .he>div:nth-child(1){
+        width: 25vw;
+        height: 8vw;
+    }
+    .he>div:nth-child(2){
+        margin-top: 1vw;
+    }
+    .dock{
+        height: 51vw;
+    }
+    .dock::after{
+        top: 50vw;
+        height: 20vw;
+    }
+    #year{
+        width: 15vw;
+        height: 4vw;
+        font-size: 4vw;
+        margin-block: 1vw;
+    }
+    #year~input{
+        width: 5vw;
+        font-size: 3vw;
     }
     .time{
-        transform: translate(58px, 51px)!important;
+        width: 15vw;
+        display: flex;
+        font-size: 5.6vw;
+    }
+    .mgroup{
+        margin-top: 46px;
+    }
+    .mgroup>div:first-child {
+        height: 48vw;
+    }
+    .date, .mname,.mname_Bangla{
+        font-size:3vw;
+    }
+    .dateBangla{
+        font-size: 2vw;
+    }
+    .mname{
+        line-height: 1.8;
+        width: 14vw;
+        padding: 0;
     }
 }
