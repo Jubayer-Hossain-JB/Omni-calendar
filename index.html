@@ -10,14 +10,14 @@
 	<title> Omni calender</title>
 	<link rel="icon" href="calender.ico">
 	<link rel="favicon" href="calender.ico">
-	<link rel="stylesheet" href="responsive.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="responsive.css">
 	<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
 	<script src="jquery.js" type='text/javascript' defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
 
 	<script src='animate.js' type="text/javascript" defer></script>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="script.js" defer></script>
 	<script type="text/javascript">
 		document.onkeyup = function(a){
 			if(a.keyCode===13){
@@ -33,7 +33,7 @@
 <body onload="thisTime()">
 	<div class="daw" draggable="true"></div>
 	<div class="top" id="sal"></div><!-- onclick="window.scroll(0,0)"-->
-	<div><div class="time" id="time">00:00</div></div>
+	<div  class="time"><div id="time">00:00</div></div>
 
 	<h1 class="Welcome" style="z-index:10;">Welcome To Omni Calender</h1>
 	<p class="det">0 to Universal Year</p>
@@ -49,7 +49,7 @@
 	</div>
 
 	<div class="dock"></div>
-	<div class="wallpapper"><img src="sarat.jpeg" alt=""></div>
+	<div class="wallpapper"><img alt="" loading="lazy"></div>
 
 	<div class="calender">
 		<h4 class="Bangla-year 1"></h4>
@@ -1149,7 +1149,7 @@
 				</div>
 			</div>
 		</div>
-		<h4 class="Bangla-year 2" style="margin:none;"></h4>
+		<h4 class="Bangla-year 2"></h4>
 		<div class="mgroup">
 			<div></div>
 			<h4 class="mname">April</h4>
