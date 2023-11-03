@@ -1,8 +1,10 @@
 setInterval(time, 1000);
 
+var year; var setdate; var thisYear;
+
 //the clock
+var time = new Date();
 function time(){
-	var time = new Date();
 	var hour, minute, second, realtime, colon;
 	hour = time.getHours();
 	minute = time.getMinutes();
@@ -31,39 +33,46 @@ function time(){
 
 var store = 0;
 function setDate(add){//mark today
-	var time = new Date();
 	var day = time.getDate();
 	var mon = time.getMonth();
 	var today = marking([day, mon]);
-	var year = parseInt(document.getElementById('year').value);
+	year = parseInt(document.getElementById('year').value);
 	if(thisYear===year)	{
 		store = today;
 		$(today).addClass('today')
 		monthArrey =[".month.1",".month.2",".month.3",".month.4",".month.5",".month.6",".month.7",".month.8",".month.9",".month.10",".month.11",".month.12",]
-		$('html, body').animate({scrollTop : 2},0,
-			function(){
-				setTimeout(
-				function(){$('html, body').animate({scrollTop : $(monthArrey[mon]).position()['top']-180},800)},
-				3500
-			)}
-		)
+		// $('html, body').animate({scrollTop : 2},800,
+		// 	function(){
+		// 		setTimeout(
+		// 		function(){$('html, body').animate({scrollTop : $(monthArrey[mon]).position()['top']-180},800)},
+		// 		3500
+		// 	)}
+		// )
 	}else{
 		document.getElementById(store).style.setProperty('background','#B2FFFE');
 		document.getElementById(store).style.setProperty('color','grey');
 	}
-	var season = [["basanto", [1,2]],["grishmo",[3,4]],["barsha",[5,6]],["sarat",[7,8]],["hamanto",[9,10]],["shit", [11,0]]]	;
-	var seasonName = season[Math.ceil(mon/2)==0?5:Math.ceil(mon/2)-1][0];
+
 }
 
 
 //set the year of now
 function thisTime() {
-    var time = new Date();
 	var now = time.getFullYear();
 	var mon = time.getMonth();
 	setdate = 35*mon; //setdate is for function setDate() for marking today 
 	document.getElementById('year').value = now;
 	thisYear = now;
+
+	var mariking_days = [15, 14, 15, 14, 15, 15 ,16, 16, 16, 17, 16, 16]//Marking for bangla new month
+	var seasons = [['shit','shit'],['shit','basanto'],['basanto','basanto'],['basanto','grisho'],['grisho','grisho'],['grisho','barsha'],['barsha','barsha'],['barsha','sarat'],['sarat','sarat'],['sarat','hamanto'],['hamanto','hamanto'],['hamanto','shit']];
+	var mon = time.getMonth()
+	var date = time.getDate()
+	var season = seasons[mon][(date<mariking_days[mon]?0:1)]
+	var img = ((Math.random()*10)>5?"2":"");
+	$('.wallpapper>img').css('background-image', 'asset/'+season+img+'.png')
+	$('.wallpapper>img').attr('src', 'asset/'+season+img+'.jpeg')
+
     Calender();
 }
 
@@ -113,8 +122,13 @@ function erase() {
 			 $('#d'+d+' .dateBangla').text('');
              d++;
             }
-							
-         Calender();
+			
+			for(let ids of holi_ids){
+			   $(ids).removeClass('holiday')
+				$(ids).removeAttr('tool-tip')
+			}
+			holi_ids = []
+			Calender();
         }
     }
 
@@ -154,7 +168,6 @@ function Calender(){
 }
 
 var januaryspace;
-var year;
 function Bangla_Arabi(){
 	var forleapyear;
 	var leapyear2;
@@ -214,7 +227,6 @@ function Bangla_Arabi(){
 		var da = marking([mariking_days[i], i]);
 		$(da+' .dateBangla').addClass("mark_bangla")
 	}
-
 }
 
 function supBangla_Arabi(ce, space, space2, next_table, st, englen, len){
@@ -255,7 +267,7 @@ function supBangla_Arabi(ce, space, space2, next_table, st, englen, len){
 //st  = from which cell will start
 //len = how date is in this month
 	
-var setdate; var thisYear;
+
 function sup(ce, end, st, len){
 	if(st>7){                  
 		if(st>28){             
@@ -282,7 +294,7 @@ function sup(ce, end, st, len){
 	}
 
 	//for show date
-	if(ce===setdate){
+	if(thisYear==year && ce==setdate){
 		setDate(st);
 	}
 		
@@ -348,6 +360,7 @@ function nov(a){
 	sup(350, 385, a, 30);
 	dece(a+2);
 }
+let holi_ids=[]
 function dece(a){
 	sup(385, 420, a, 31);
 	Bangla_Arabi();
@@ -364,9 +377,11 @@ function dece(a){
 		[16,11, "বিজয় দিবস"],
 		[25,11, "Christmas Day"]
 	]
+	
 	for(var i=0; i<holy_days.length; i++){
 		var holiday_cell_id = $( marking(holy_days[i]))
-		holiday_cell_id.addClass('holyday');
+		holi_ids.push(holiday_cell_id)
+		holiday_cell_id.addClass('holiday');
 		holiday_cell_id.attr({'tool-tip': holy_days[i][2]});
 		
 	}
@@ -375,7 +390,7 @@ function dece(a){
 
 
 
-//marking Days if neccesary
+//marking Days if neccesary. Takes [date, month, text] .Returns the actual cell id related to date, month
 
 function marking(date){
 	var forleapyear;
@@ -426,3 +441,8 @@ function marking(date){
 	
 
 }
+
+
+
+/*****************************************/
+document.querySelector(".wallpapper img").addEventListener('load', e=>e.target.classList.add('loaded'))
