@@ -29,16 +29,24 @@
         clip-path: ellipse(58% 43% at 50% 2%);
     }
     .wallpapper{
+        width: 100vw;
+        height: 100vh;
         position: fixed;
         top: 0;
         z-index: -2;
+        background-image: url(asset/hamanto.png);
+        background-size: cover;
+        background-position: center;
     }
     .wallpapper img{
         min-width: 100vw;
         max-height: 100vh;
         object-fit: cover;
+        opacity: 0;
+        transition: opacity 2s;
     }
-
+    .loaded{opacity: 1!important}
+    
     .he{
         display:flex;
         justify-content:center;
@@ -106,7 +114,6 @@
         display: inline-grid;
         grid-template-columns: auto auto auto auto auto auto auto;
         border-radius: 1.5vw;
-        overflow: hidden;
     }
     .date{
         position: relative;
@@ -124,6 +131,10 @@
         font-weight: bold;
         font-size: 1.6vw;;
     }
+    .month .date:first-child{border-radius: 1.5vw 0 0}
+    .month .date:nth-child(7){border-radius: 0 1.5vw 0 0}
+    .month .date:nth-child(36){border-radius: 0 0 0 1.5vw}
+    .month .date:last-child{border-radius: 0 0 1.5vw}
     .today{
         background :#5A9AEB;
         color: #fff
@@ -220,11 +231,11 @@
     color:var(--head-color)
 }
 
-.fri:hover, .holyday, .holyday .dateBangla{
+.fri:hover, .holiday, .holiday .dateBangla{
     background: #C70039;
     color: beige;
 }
-.s:hover, .su:hover,.mon:hover,.tue:hover,.wed:hover,.thu:hover{ transition: background-color 0.5s ease-out;}
+.s, .su,.mon,.tue,.wed,.thu, .fri{ transition: background-color 0.3s ease-out;}
 .s:hover, .su:hover,.mon:hover,.tue:hover,.wed:hover,.thu:hover, .mark_bangla{
     background: #18c5d6;
     color:beige;
@@ -291,12 +302,12 @@
     font-size: 1.8vw;
     text-align:center;
 }
-.holyday::after,
-.holyday::before{
+.holiday::after,
+.holiday::before{
     --color: #333;
     position: absolute;
-    top: -40PX;
-    left: 85px;        
+    top: -25px;
+    left: 63px;        
     transform: translateY(var(--translateY)) translateX(-50%);
     opacity:0;
     visibility:hidden;
@@ -304,18 +315,19 @@
     transform-origin: bottom center;
     font-size: 16px;
 }
-.holyday::before{
+.holiday::before{
     content: attr(tool-tip);
     --translateY: -100%;
     width: max-content;
-    max-width: 20rem;
+    max-width: 10rem;
     padding: 10px;
     background: var(--color);
     border-radius: 10px;
+    filter:opacity(0.8);
     box-shadow:  0 0 8px rgba(0, 0, 0, 0.934);
 }
 
-.holyday::after{
+.holiday::after{
     content: '';
     --translateY: 0;
     border: 10px solid transparent;
@@ -323,11 +335,11 @@
     transform-origin: top center;
 }
 
-.holyday:hover::before,
-.holyday:hover::after{
+.holiday:hover::before,
+.holiday:hover::after{
     opacity: 1;
     visibility: visible;
-    translate: -15px;
+    translate: -2px;
     top: -11px
 }
 
